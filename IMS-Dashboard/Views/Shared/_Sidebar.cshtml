@@ -1,0 +1,183 @@
+﻿<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">
+                <i class="mdi mdi-grid-large menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item nav-category">Reports</li>
+
+        @* Product *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#product" aria-expanded="false" aria-controls="product">
+                <i class="menu-icon mdi mdi-cube-outline"></i>
+                <span class="menu-title">Products</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="product">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllProducts", "Products")">Display Products</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("CreateProduct", "Products")">Add Products</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Customer *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#customers" aria-expanded="false" aria-controls="customers">
+                <i class="menu-icon mdi mdi-account-group-outline"></i>
+                <span class="menu-title">Customers</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="customers">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllCustomers", "Customers")">Display Customers</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("CreateCustomer", "Customers")">Add Customers</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Supplier *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#supplier" aria-expanded="false" aria-controls="supplier">
+                <i class="menu-icon mdi mdi-truck-outline"></i>
+                <span class="menu-title">Suppliers</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="supplier">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllSuppliers", "Suppliers")">Display Supplier</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("CreateSupplier", "Suppliers")">Add Supplier</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Inventory *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#inventory" aria-expanded="false" aria-controls="inventory">
+                <i class="menu-icon mdi mdi-warehouse"></i>
+                <span class="menu-title">Inventory</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="inventory">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllInventories", "Inventories")">Display Inventory</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("CreateInventory", "Inventories")">Add Inventory</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Order *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#order" aria-expanded="false" aria-controls="order">
+                <i class="menu-icon mdi mdi-cart-outline"></i>
+                <span class="menu-title">Orders</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="order">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllOrders", "Orders")">Display Orders</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Category *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#category" aria-expanded="false" aria-controls="category">
+                <i class="menu-icon mdi mdi-tag-outline"></i>
+                <span class="menu-title">Category</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="category">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllCategories", "Categories")">Display Category</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("CreateCategory", "Categories")">Add Category</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Order Status *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#orderstatus" aria-expanded="false" aria-controls="orderstatus">
+                <i class="menu-icon mdi mdi-clock"></i>
+                <span class="menu-title">Order Status</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="orderstatus">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllOrderStatus", "OrderStatus")">Display Order Status</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Edit Order Status</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Add Order Status</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Manufacturer *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#manufacturer" aria-expanded="false" aria-controls="manufacturer">
+                <i class="menu-icon mdi mdi-hammer-wrench"></i>
+                <span class="menu-title">Manufacturers</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="manufacturer">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllManufacturers", "Manufacturers")">Display Manufacturer</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("CreateManufacturer", "Manufacturers")">Add Manufacturer</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Payment Methods *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#paymentmethod" aria-expanded="false" aria-controls="paymentmethod">
+                <i class="menu-icon mdi mdi-credit-card-outline"></i>
+                <span class="menu-title">Payment Methods</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="paymentmethod">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllPaymentMethods", "PaymentMethods")">Display Payment Methods</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("CreatePaymentMethod", "PaymentMethods")">Add Payment Methods</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Transaction Types *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#transactiontype" aria-expanded="false" aria-controls="transactiontype">
+                <i class="menu-icon mdi mdi-cash-multiple"></i>
+                <span class="menu-title">Transaction Types</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="transactiontype">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllTransactionTypes", "TransactionTypes")">Display Transaction Types</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("CreateTransactionType", "TransactionTypes")">Add Transaction Types</a></li>
+                </ul>
+            </div>
+        </li>
+
+        @* Unit of Measures *@
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#unitofmeasure" aria-expanded="false" aria-controls="unitofmeasure">
+                <i class="menu-icon mdi mdi-calculator"></i>
+                <span class="menu-title">Unit Of Measures</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="unitofmeasure">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllUnitOfMeasures", "UnitOfMeasures")">Display Units</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("CreateUnit", "UnitOfMeasures")">Add Units</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="../docs/documentation.html">
+                <i class="menu-icon mdi mdi-file-document"></i>
+                <span class="menu-title">Documentation</span>
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,35 @@
+﻿@model IMS_Dashboard.ViewModels.ManufacturerVM.CreateManufacturerViewModel
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create Unit Of Measures</h4>
+            @* <p class="card-description"> Basic form elements </p> *@
+            <form asp-action="CreateManufacturer" class="forms-sample" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="ManufacturerName" class="control-label"></label>
+                    <input asp-for="ManufacturerName" type="text" class="form-control" placeholder="Enter Manufacturer Name">
+                    <span asp-validation-for="ManufacturerName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ContactInfo" class="control-label"></label>
+                    <input asp-for="ContactInfo" type="text" class="form-control" placeholder="Enter Contact Number">
+                    <span asp-validation-for="ContactInfo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" type="text" class="form-control" placeholder="Enter Address">
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,166 @@
+﻿@model IMS_Dashboard.ViewModels.OrderVM.CreateOrderViewModel
+
+@{
+    ViewBag.Title = "Create Order";
+}
+
+<div class="col-12 grid-margin">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@ViewBag.Title</h4>
+            <form class="form-sample">
+                @* <p class="card-description"> Personal info </p> *@
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Product Category</label>
+                            <div class="col-sm-9">
+                                <select class="form-select">
+                                    <option>Category 1</option>
+                                    <option>Category 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Product Name</label>
+                            <div class="col-sm-9">
+                                <select class="form-select">
+                                    <option>Product 1</option>
+                                    <option>Product 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Customer Name</label>
+                            <div class="col-sm-9">
+                                <select class="form-select">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Order Date</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" placeholder="dd/mm/yyyy" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Quantity</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Unit Price</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Total Price</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Payment Method</label>
+                            <div class="col-sm-9">
+                                <select class="form-select">
+                                    <option>Cash-on Delivery</option>
+                                    <option>Debit Card</option>
+                                    <option>Credit Card</option>
+                                    <option>Net Banking</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Shipping Address</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Notes</label>
+                            <iv class="col-sm-9">
+                                <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                            </iv>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateOrder">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label"></label>
+                <input asp-for="CustomerId" class="form-control" />
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderDate" class="control-label"></label>
+                <input asp-for="OrderDate" class="form-control" />
+                <span asp-validation-for="OrderDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalAmount" class="control-label"></label>
+                <input asp-for="TotalAmount" class="form-control" />
+                <span asp-validation-for="TotalAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentMethodId" class="control-label"></label>
+                <input asp-for="PaymentMethodId" class="form-control" />
+                <span asp-validation-for="PaymentMethodId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShippingAddress" class="control-label"></label>
+                <input asp-for="ShippingAddress" class="form-control" />
+                <span asp-validation-for="ShippingAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Notes" class="control-label"></label>
+                <input asp-for="Notes" class="form-control" />
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

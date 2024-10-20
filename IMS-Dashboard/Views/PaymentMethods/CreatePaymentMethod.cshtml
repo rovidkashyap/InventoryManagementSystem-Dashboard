@@ -1,0 +1,36 @@
+﻿@model IMS_Dashboard.ViewModels.PaymentMethodsVM.CreatePaymentMethodViewModel
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create Payment Method</h4>
+            <form asp-action="CreatePaymentMethod" class="forms-sample" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="PaymentMethodName" class="control-label"></label>
+                    <input asp-for="PaymentMethodName" type="text" class="form-control" placeholder="Enter Payment Method Name">
+                    <span asp-validation-for="PaymentMethodName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" type="text" class="form-control" placeholder="Enter Description">
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
